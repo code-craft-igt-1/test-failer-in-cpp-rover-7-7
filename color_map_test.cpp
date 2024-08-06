@@ -1,8 +1,8 @@
-#include <assert.h>
+#include <cassert>
 #include <iostream>
 #include <vector>
 #include <string>
-#include "color_map.h"
+#include "color_map.h"  // Include the header file with directory if applicable
 
 int main() {
     std::vector<std::string> result = printColorMap();
@@ -33,7 +33,7 @@ int main() {
         "24 Violet Brown",
         "25 Violet Slate"
     };
-    assert( result == colorCombinations );
-    std::cout << "All is well \n";
+    assert(result == colorCombinations);
+    std::cout << "All is well\n";  
     return 0;
-}
+}  
