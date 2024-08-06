@@ -1,7 +1,9 @@
 #include <assert.h>
 #include <iostream>
 
-char size(int cms) {
+using namespace std;
+
+char size_measure(int cms) {
     char sizeName = '\0';
     if (cms < 38) {
         sizeName = 'S';
@@ -13,10 +15,3 @@ char size(int cms) {
     return sizeName;
 }
 
-int main() {
-    assert(size(37) == 'S');
-    assert(size(40) == 'M');
-    assert(size(43) == 'L');
-    std::cout << "All is well (maybe!)\n";
-    return 0;
-}
