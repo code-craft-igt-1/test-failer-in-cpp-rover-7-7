@@ -1,11 +1,13 @@
 #include <cassert>
 #include <iostream>
-#include "weather_report.h"
+#include <vector>
+#include <string>
+#include "weather_report.h"  
 
 using std::string;
-using namespace WeatherSpace;
+using std::vector;
 
-class SensorStub : public IWeatherSensor {
+class SensorStub : public WeatherSpace::IWeatherSensor {
  public:
     int Humidity() const override {
         return 72;
@@ -25,14 +27,14 @@ class SensorStub : public IWeatherSensor {
 };
 
 // New stub for testing different scenarios
-class HighPrecipitationLowWindStub : public IWeatherSensor {
+class HighPrecipitationLowWindStub : public WeatherSpace::IWeatherSensor {
  public:
     double TemperatureInC() const override {
         return 26;
     }
 
     int Precipitation() const override {
-        return 70;  
+        return 70;  // High precipitation
     }
 
     int Humidity() const override {
@@ -40,28 +42,28 @@ class HighPrecipitationLowWindStub : public IWeatherSensor {
     }
 
     int WindSpeedKMPH() const override {
-        return 40; 
+        return 40;  // Low wind speed
     }
 };
 
 // Test cases
 void TestRainy() {
     SensorStub sensor;
-    std::string report = Report(sensor);
+    string report = WeatherSpace::Report(sensor);
     std::cout << "TestRainy: " << report << std::endl;
-    assert(report.find("rain") != std::string::npos);
+    assert(report.find("rain") != string::npos);
 }
 
 void TestHighPrecipitationAndLowWindspeed() {
     HighPrecipitationLowWindStub sensor;
-    std::string report = Report(sensor);
+    string report = WeatherSpace::Report(sensor);
     std::cout << "TestHighPrecipitationAndLowWindspeed: " << report << std::endl;
-    assert(report.find("rain") != std::string::npos);
+    assert(report.find("rain") != string::npos);
 }
 
 int main() {
     TestRainy();
     TestHighPrecipitationAndLowWindspeed();
-    std::cout << "All tests executed\n";
+    std::cout << "All tests executed\n";  // newline
     return 0;
-}
+}  // Ensure a newline at the end of the file
