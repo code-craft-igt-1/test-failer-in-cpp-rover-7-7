@@ -6,4 +6,4 @@
 
 std::vector<std::string> printColorMap();
 
-#endif  // COLOR_MAP_H
+#endif  

@@ -33,7 +33,7 @@ int main() {
         "24 Violet Brown",
         "25 Violet Slate"
     };
-    assert(result == colorCombinations);
+    assert( result == colorCombinations );
     std::cout << "All is well \n";
     return 0;
 }

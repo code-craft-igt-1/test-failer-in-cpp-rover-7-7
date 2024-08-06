@@ -2,7 +2,7 @@
 #include <iostream>
 #include "weather_report.h"
 
-using namespace std;
+using std::string;
 using namespace WeatherSpace;
 
 class SensorStub : public IWeatherSensor {
@@ -32,7 +32,7 @@ class HighPrecipitationLowWindStub : public IWeatherSensor {
     }
 
     int Precipitation() const override {
-        return 70;  // High precipitation
+        return 70;  
     }
 
     int Humidity() const override {
@@ -40,7 +40,7 @@ class HighPrecipitationLowWindStub : public IWeatherSensor {
     }
 
     int WindSpeedKMPH() const override {
-        return 40;  // Low wind speed
+        return 40; 
     }
 };
 
@@ -48,20 +48,20 @@ class HighPrecipitationLowWindStub : public IWeatherSensor {
 void TestRainy() {
     SensorStub sensor;
     std::string report = Report(sensor);
-    cout << "TestRainy: " << report << endl;
+    std::cout << "TestRainy: " << report << std::endl;
     assert(report.find("rain") != std::string::npos);
 }
 
 void TestHighPrecipitationAndLowWindspeed() {
     HighPrecipitationLowWindStub sensor;
     std::string report = Report(sensor);
-    cout << "TestHighPrecipitationAndLowWindspeed: " << report << endl;
+    std::cout << "TestHighPrecipitationAndLowWindspeed: " << report << std::endl;
     assert(report.find("rain") != std::string::npos);
 }
 
 int main() {
     TestRainy();
     TestHighPrecipitationAndLowWindspeed();
-    cout << "All tests executed\n";
+    std::cout << "All tests executed\n";
     return 0;
 }

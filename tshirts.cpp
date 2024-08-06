@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <iostream>
-
-using namespace std;
+#include "tshirts.h"
+using std::string;;
 
 char size_measure(int cms) {
     char sizeName = '\0';

@@ -16,6 +16,6 @@ class IWeatherSensor {
 // Function to generate a weather report based on sensor data
 std::string Report(const IWeatherSensor& sensor);
 
-}  // namespace WeatherSpace
+}  
 
-#endif // WEATHER_REPORT_H
+#endif 
