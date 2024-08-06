@@ -1,5 +1,6 @@
 #include <assert.h>
 #include <iostream>
+#include<string>
 #include "tshirts.h"
 using std::string;;
 
@@ -14,4 +15,3 @@ char size_measure(int cms) {
     }
     return sizeName;
 }
-
