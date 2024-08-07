@@ -12,7 +12,7 @@ std::vector<std::string> printColorMap() {
     for (int i = 0; i < majorColorsSize; i++) {
         for (int j = 0; j < minorColorsSize; j++) {
             std::string colorPair = std::to_string(i * 5 + j + 1) + " " +
-                                    majorColors[i] + " " + minorColors[j];
+                                    majorColors[i] + " " + minorColors[i];
             colorMap.push_back(colorPair);
         }
     }
