@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "color_map.h"  
+#include "..\color_map.h"  
 
 int main() {
     std::vector<std::string> result = printColorMap();
@@ -36,4 +36,4 @@ int main() {
     assert(result == colorCombinations);
     std::cout << "All is well\n";
     return 0;
-}
+}  //
