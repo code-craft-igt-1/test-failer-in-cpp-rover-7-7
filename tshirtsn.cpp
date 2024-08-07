@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <iostream>
 #include<string>
-#include "tshirtsn.h"
+#include "./tshirtsn.h"
 using std::string;
 
 char size_measure(int cms) {

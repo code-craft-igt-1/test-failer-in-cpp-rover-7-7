@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "weatherreportn.h"
+#include "./weatherreportn.h"
 
 using std::string;
 using std::vector;

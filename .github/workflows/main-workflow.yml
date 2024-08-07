@@ -15,7 +15,7 @@ jobs:
 
     - name: tshirts fail
       run: |
-        g++ -Wall -Wextra -Werror tshirtsn.cpp  tshirts_testn.cpp -o tshirts.out
+        g++ -Wall -Wextra -Werror tshirtsn.cpp  tshirtsn_test.cpp -o tshirts.out
         bash .github/workflows/expectfail.sh ./tshirts.out
 
     - name: misaligned fail
@@ -25,5 +25,5 @@ jobs:
 
     - name: alerter fail
       run: |
-        g++ -Wall -Wextra -Werror weather_reportn.cpp weather_reportn_test.cpp -o weatherreport.out
+        g++ -Wall -Wextra -Werror weatherreportn.cpp weatherreportntest.cpp -o weatherreport.out
         bash .github/workflows/expectfail.sh ./weatherreport.out
