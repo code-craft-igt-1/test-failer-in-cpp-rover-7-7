@@ -1,5 +1,5 @@
 #include "weather_reportn.h"
-
+#include <string>
 namespace WeatherSpace {
 
 std::string Report(const IWeatherSensor& sensor) {
