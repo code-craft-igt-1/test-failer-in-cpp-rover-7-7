@@ -1,6 +1,6 @@
 #include <vector>
 #include <string>
-#include "color_map.h"
+#include "../color_map.h"
 
 std::vector<std::string> printColorMap() {
     std::vector<std::string> colorMap;
