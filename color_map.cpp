@@ -1,6 +1,6 @@
-#include "..\color_map.h"
 #include <vector>
 #include <string>
+#include "color_map.h"
 
 std::vector<std::string> printColorMap() {
     std::vector<std::string> colorMap;
@@ -17,4 +17,4 @@ std::vector<std::string> printColorMap() {
         }
     }
     return colorMap;
-}  //
+}  // printcolor map function
