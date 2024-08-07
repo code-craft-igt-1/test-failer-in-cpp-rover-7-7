@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "color_map/color_map.h"
+#include "color_mapn.h"
 
 int main() {
     std::vector<std::string> result = printColorMap();

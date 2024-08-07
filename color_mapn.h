@@ -1,5 +1,5 @@
-#ifndef COLOR_MAP_H
-#define COLOR_MAP_H
+#ifndef COLOR_MAPN_H
+#define COLOR_MAPN_H
 
 #include <vector>
 #include <string>
