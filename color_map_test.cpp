@@ -36,4 +36,4 @@ int main() {
     assert(result == colorCombinations);
     std::cout << "All is well\n";
     return 0;
-}  // main function
+}

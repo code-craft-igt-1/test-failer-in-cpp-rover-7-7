@@ -17,4 +17,4 @@ std::vector<std::string> printColorMap() {
         }
     }
     return colorMap;
-}  // printcolor map function
+}

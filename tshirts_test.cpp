@@ -12,4 +12,4 @@ int main() {
     assert(size_measure(38) == 'M');
     std::cout << "All is well\n";
     return 0;
-}  // main function
+}

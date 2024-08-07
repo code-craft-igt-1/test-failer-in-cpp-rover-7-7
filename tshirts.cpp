@@ -14,4 +14,4 @@ char size_measure(int cms) {
         sizeName = 'L';
     }
     return sizeName;
-}  // function size_measure
+}

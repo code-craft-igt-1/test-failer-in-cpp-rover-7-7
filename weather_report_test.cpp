@@ -66,4 +66,4 @@ int main() {
     TestHighPrecipitationAndLowWindspeed();
     std::cout << "All tests executed\n";  // newline
     return 0;
-}  // Ensure a newline at the end of the file
+}
