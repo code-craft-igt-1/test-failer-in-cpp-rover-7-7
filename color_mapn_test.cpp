@@ -5,7 +5,7 @@
 #include "./color_mapn.h"
 
 int main() {
-    std::vector<std::string> result = printColorMap();
+    std::vector<std::string> result = createColorMap();
     std::vector<std::string> colorCombinations = {
         "1 White Blue",
         "2 White Orange",
@@ -34,6 +34,7 @@ int main() {
         "25 Violet Slate"
     };
     assert(result == colorCombinations);
-    std::cout << "All is well\n";
+    printColormap();
+    std::cout << "\n              All is well             \n";
     return 0;
 }

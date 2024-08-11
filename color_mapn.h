@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 
-std::vector<std::string> printColorMap();
+std::vector<std::string> createColorMap();
+void printColormap();
 
-#endif  
+#endif

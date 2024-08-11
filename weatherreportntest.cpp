@@ -7,6 +7,7 @@
 using std::string;
 using std::vector;
 
+
 class SensorStub : public WeatherSpace::IWeatherSensor {
  public:
     int Humidity() const override {
@@ -26,7 +27,7 @@ class SensorStub : public WeatherSpace::IWeatherSensor {
     }
 };
 
-// New stub for testing different scenarios
+
 class HighPrecipitationLowWindStub : public WeatherSpace::IWeatherSensor {
  public:
     double TemperatureInC() const override {
@@ -46,24 +47,25 @@ class HighPrecipitationLowWindStub : public WeatherSpace::IWeatherSensor {
     }
 };
 
-// Test cases
+
 void TestRainy() {
     SensorStub sensor;
     string report = WeatherSpace::Report(sensor);
     std::cout << "TestRainy: " << report << std::endl;
-    assert(report.find("rain") != string::npos);
+    assert(report == "Heavy rain");
 }
+
 
 void TestHighPrecipitationAndLowWindspeed() {
     HighPrecipitationLowWindStub sensor;
     string report = WeatherSpace::Report(sensor);
     std::cout << "TestHighPrecipitationAndLowWindspeed: " << report << std::endl;
-    assert(report.find("rain") != string::npos);
+    assert(report == "Heavy rain");
 }
 
 int main() {
     TestRainy();
     TestHighPrecipitationAndLowWindspeed();
-    std::cout << "All tests executed\n";  // newline
+    std::cout << "All tests executed\n";
     return 0;
 }
